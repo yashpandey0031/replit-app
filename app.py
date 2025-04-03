@@ -1,7 +1,6 @@
 import streamlit as st
+st.set_page_config(page_title="Cognifit", layout="wide")
 from pages import home,  assessment , about , resources , education
-
-#st.set_page_config(page_title="Cognifit", layout="wide")
 
 # If sidebar isn't needed, remove its content
 for _ in range(10):  
