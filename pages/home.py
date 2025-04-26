@@ -26,30 +26,7 @@ def show():
                 text-align: left;
             }
 
-            /* Center the button */
-            .button-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
-        
-            .stButton>button {
-                background-color: #2C3E50;
-                color: white;
-                border-radius: 10px;
-                font-size: 22px;
-                padding: 15px 30px;
-                border: none;
-                display: block;
-                margin: auto; /* Forces centering */
-            }
-
-            .stButton>button:hover {
-                color: #1E90FF !important; /* Changes text color to blue */
-                border: 2px solid #1E90FF !important; /* Changes border to blue */
-}
+            
 
             /* Style text for readability */
             .text-box {
@@ -76,7 +53,7 @@ def show():
         </ul>
     """, unsafe_allow_html=True)
 
-        # Centered Button (Now properly centered with better styling)
+    # Centered Button (Now properly centered with better styling)
     st.markdown("""
             <style>
                 .button-container {
@@ -98,11 +75,7 @@ def show():
             </style>
         """, unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([1, 2, 1])  # Creates three columns, centering the button
-    with col2:  
-            if st.button("Take Assessment"):
-                st.switch_page("pages/assessment.py")
-
+    
   # Directly shows the assessment page (if using single-page)
 
     # Load and display first image

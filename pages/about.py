@@ -31,7 +31,7 @@ def show():
         **Yash Pandey**  
         *Developer*
         
-        Yash loves talking and researching about human phychology and is also a passionate developer
+        Yash loves talking and researching about human psychology and is also a passionate developer
         """)
     
     with col2:
@@ -79,8 +79,8 @@ def show():
     st.markdown("""
     We welcome your feedback, questions, and suggestions. Please reach out to us at:
     
-    📧 Email: cognifit@gmail.com  
-    📱 Phone: +91 XX-XXX-XXXXX
+    📧 Email: yashpandey1556@gmail.com / Tanazzamuskan@gmail.com / loveharshi005@gmail.com
+    📱 Phone: +91 9717273400 , 9315067537 , 9654558311
     
    
     """)
@@ -111,3 +111,10 @@ def show():
     </div>
     """, unsafe_allow_html=True)
 
+# Disclaimer
+    st.markdown("""
+    ---
+    ⚠ *Disclaimer:*  
+    The ML-generated quiz *is not a medical diagnosis*. It is only meant to give you a general idea about your mental health condition.  
+    If you're experiencing mental health challenges, *please consult a qualified medical professional*.  
+""")
