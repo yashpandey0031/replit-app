@@ -70,14 +70,13 @@ def show():
         gender = st.selectbox("Gender", list(category_mappings['Gender'].keys()))
         occupation = st.selectbox("Occupation", list(category_mappings['Occupation'].keys()))
         country = st.selectbox("Country", list(category_mappings['Country'].keys()))
-        severity = st.selectbox("Severity of your Mental condition", list(category_mappings['Severity'].keys()))
+        mood = st.selectbox("Your mood for the last week", list(category_mappings['Mood'].keys()))
         consultation_history = st.selectbox("Consultation History regarding Mental Health", list(category_mappings['Consultation_History'].keys()))
-        stress_level = st.selectbox("Stress Level", list(category_mappings['Stress_Level'].keys()))
-        diet_quality = st.selectbox("Diet Quality", list(category_mappings['Diet_Quality'].keys()))
-        smoking_habit = st.selectbox("Smoking Habit", list(category_mappings['Smoking_Habit'].keys()))
-        alcohol_consumption = st.selectbox("Alcohol Consumption", list(category_mappings['Alcohol_Consumption'].keys()))
-        medication_usage = st.selectbox("Medication Usage", list(category_mappings['Medication_Usage'].keys()))
-
+        change = st.selectbox("Have you been through any change recently?", list(category_mappings['Change'].keys()))
+        diet_quality = st.selectbox("How is your diet quality like?", list(category_mappings['Diet_Quality'].keys()))
+        smoking_habit = st.selectbox("What is your smoking habit?", list(category_mappings['Smoking_Habit'].keys()))
+        alcohol_consumption = st.selectbox("How is your alcohol consumption?", list(category_mappings['Alcohol_Consumption'].keys()))
+        medication_usage = st.selectbox("Have you taken any medication for mental health in the past?", list(category_mappings['Medication_Usage'].keys()))
         sleep_hours = st.number_input("Sleep Hours (per day)", min_value=0.0, max_value=18.0, value=7.0)
         work_hours = st.number_input("Work Hours (per week)", min_value=0, max_value=70, value=40)
         physical_activity = st.number_input("Physical Activity Hours (per week)", min_value=0, max_value=35, value=5)
@@ -89,9 +88,9 @@ def show():
             category_mappings['Gender'][gender], 
             category_mappings['Occupation'][occupation], 
             category_mappings['Country'][country], 
-            category_mappings['Severity'][severity], 
+            category_mappings['Mood'][mood], 
             category_mappings['Consultation_History'][consultation_history], 
-            category_mappings['Stress_Level'][stress_level], 
+            category_mappings['Change'][change], 
             sleep_hours, 
             work_hours, 
             physical_activity, 
@@ -101,8 +100,8 @@ def show():
             category_mappings['Alcohol_Consumption'][alcohol_consumption], 
             category_mappings['Medication_Usage'][medication_usage]
         ]], 
-        columns=['Age', 'Gender', 'Occupation', 'Country', 'Severity', 'Consultation_History', 
-                 'Stress_Level', 'Sleep_Hours', 'Work_Hours', 'Physical_Activity_Hours', 
+        columns=['Age', 'Gender', 'Occupation', 'Country', 'Mood', 'Consultation_History', 
+                 'Change', 'Sleep_Hours', 'Work_Hours', 'Physical_Activity_Hours', 
                  'Social_Media_Usage', 'Diet_Quality', 'Smoking_Habit', 'Alcohol_Consumption', 
                  'Medication_Usage'])
 
